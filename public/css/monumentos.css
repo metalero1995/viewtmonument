@@ -1,0 +1,532 @@
+/*OCULTAR LOS SORTING DEL DATATABLE*/
+.sorting_asc,
+.sorting,
+.sorting_asc::after {
+  visibility: collapse;
+}
+
+/*OCULTAR LA INFORMACIÓN DE LOS ELEMENTOS TRAIDOS DEL DATATABLE*/
+.dataTables_info,
+.dataTables_length {
+  visibility: hidden;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+main {
+  margin: auto;
+  max-width: 1200px;
+  display: flex !important;
+  align-items: center;
+  flex-direction: column;
+}
+
+.ordenarNombreeImagen {
+  display: flex;
+}
+
+.formatoNombreeImagen {
+  display: flex;
+  flex-direction: column;
+  padding-left: 25px;
+  padding-right: 25px;
+  padding-bottom: 50px;
+  margin-bottom: 6px;
+}
+
+.nombres_Monumentos {
+  font-size: 24px;
+  font-family: 'MarkBold';
+  color: #003D4C;
+  padding-bottom: 10px;
+}
+
+.imagen {
+  cursor: pointer;
+  width: 350px;
+  height: 350px;
+}
+
+/*Clase de buscar*/
+.dataTables_filter {
+  padding-left: 25px;
+  padding-right: 25px;
+  text-align: justify !important;
+  font-family: 'MarkLight';
+  font-size: 20px;
+
+}
+
+.dataTables_filter label {
+  border: 1px solid #003D4C;
+  padding: 5px;
+  color: #003D4C;
+
+}
+
+.dataTables_filter input {
+  height: 29px;
+  width: 1062px !important;
+  background-color: transparent;
+  border: 0px solid #003D4C;
+  border-left: 1px solid #003D4C;
+  color: #003D4C;
+  font-family: 'MarkLight';
+  font-size: 20px;
+  size: 30px;
+  margin-bottom: 20px;
+  padding: 5px;
+  outline: none;
+}
+
+.pagination {
+  display: flex;
+  justify-content: space-between;
+  padding-left: 25px;
+  padding-right: 25px;
+}
+
+.paginate_button {
+  list-style: none;
+  font-family: 'MarkLight';
+  font-weight: bold;
+
+}
+
+.paginate_button a {
+  text-decoration: none;
+  color: #003D4C;
+
+
+}
+.borrarEstilodeA{
+  text-decoration: none;
+  color: #F3EBEB;
+}
+
+
+#map {
+
+  width: 100%;
+  height: 400px;
+  position: relative;
+  overflow: hidden;
+}
+.ordenarRaiting{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.rate {
+  float: left;
+  height: 46px;
+  padding: 0 10px;
+}
+.rate:not(:checked) > input {
+  position:absolute;
+  /*Prueba top: 999px*/
+  visibility: hidden;
+}
+.rate:not(:checked) > label {
+  float:right;
+  width:1em;
+  overflow:hidden;
+  white-space:nowrap;
+  cursor:pointer;
+  font-size:30px;
+  color:#ccc;
+}
+.rate:not(:checked) > label:before {
+  content: '★ ';
+}
+.rate > input:checked ~ label {
+  color: #ffc700;    
+}
+.rate:not(:checked) > label:hover,
+.rate:not(:checked) > label:hover ~ label {
+  color: #deb217;  
+}
+.rate > input:checked + label:hover,
+.rate > input:checked + label:hover ~ label,
+.rate > input:checked ~ label:hover,
+.rate > input:checked ~ label:hover ~ label,
+.rate > label:hover ~ input:checked ~ label {
+  color: #c59b08;
+}
+
+/*Lupa*/
+.lupa {
+  height: 40px;
+  width: 40px;
+  background-color: transparent;
+  border: 1px solid #003D4C;
+  font-family: 'MarkLight';
+  font-size: 20px;
+  size: 30px;
+  margin-bottom: 20px;
+  padding: 10px;
+  outline: none;
+  border-right: none;
+}
+
+#ordenar {
+  height: 40px;
+  width: 210px;
+  background-color: transparent;
+  border: 1px solid #003D4C;
+  border-left: none;
+  font-family: 'MarkLight';
+  font-size: 20px;
+  size: 30px;
+  margin-bottom: 20px;
+  padding: 5px;
+  outline: none;
+}
+
+#buscar {
+  height: 40px;
+  width: 900px;
+  background-color: transparent;
+  border: 1px solid #003D4C;
+  border-left: none;
+  font-family: 'MarkLight';
+  font-size: 20px;
+  size: 30px;
+  margin-bottom: 20px;
+  padding: 5px;
+  outline: none;
+}
+
+.form_estilo {
+  display: inline-flex;
+}
+
+.busqueda {
+  margin: auto;
+  max-width: 1200px;
+  padding: 25px;
+}
+
+#paginador,
+#publicaciones {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+#publicaciones {
+  display: inline-flex;
+  flex-wrap: wrap;
+}
+
+#publicaciones div {
+  padding-left: 25px;
+  padding-right: 25px;
+  padding-bottom: 50px;
+  margin-bottom: 6px;
+}
+
+#publicaciones li:not( :last-child) {
+  border-bottom: 1px solid #F3EBEB;
+}
+
+#paginador {
+  display: flex;
+  justify-content: center;
+}
+
+#paginador li {
+  margin: 2px;
+}
+
+#paginador a {
+  display: flex;
+  width: 4ch;
+  height: 4ch;
+  background: #487a7b;
+  align-items: center;
+  justify-content: center;
+  font-family: 'MarkLight';
+  font-size: 15px;
+  border-radius: 50%;
+  color: #F3EBEB;
+  text-decoration: none;
+}
+
+#paginador a.actual {
+  background: #003D4C;
+  color: #F3EBEB;
+  margin-bottom: 30px;
+}
+
+/* -------------------------------------------------
+
+MODAL
+
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+/*Variables para el modal*/
+:root {
+  --bounceEasing: cubic-bezier(0.51, 0.92, 0.24, 1.15);
+}
+
+/*Formato general del modal*/
+.modal {
+  z-index: 100;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+  backdrop-filter: blur(8px);
+  background: rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  visibility: hidden;
+  opacity: 0;
+  transition: all 0.35s ease-in;
+}
+
+/*Visibilidad del modal*/
+.modal.is-visible {
+  visibility: visible;
+  opacity: 1;
+}
+
+/*Contiene todo lo visible y tangible del modal*/
+.modal-dialog {
+  position: relative;
+  width: 680px;
+  max-width: 680px;
+  max-height: 90vh;
+  border-radius: 5px;
+  background: #F3EBEB;
+  overflow: auto;
+  cursor: default;
+  overflow-x: hidden;
+  overflow-y: initial !important
+}
+
+.modal-dialog::-webkit-scrollbar {
+  display: none;
+}
+
+/*Formato para el body del modal*/
+.modal-content {
+  padding: 1rem;
+  padding-top: 0px;
+}
+
+/*Formato para el header del modal*/
+.modal-header {
+  font-family: 'MarkBold';
+  color: #003D4C;
+  font-size: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-bottom: 1rem;
+  padding-left: 1rem;
+  padding-top: 1rem;
+  padding-right: 2rem;
+  background: #F3EBEB;
+}
+
+/*Espacio del header para el modal*/
+.modal-header .close-modal {
+  font-size: 1.5rem;
+}
+
+/*botón para cerrar el modal*/
+.close-modal {
+  color: #003D4C;
+  cursor: pointer;
+  border: none;
+  background: transparent;
+}
+
+/*Linea horizontal (no hay mucho que decir xd)*/
+.linea_horizontal {
+  margin-top: 0px;
+  margin-bottom: 0px;
+  border: 1/2px solid #003D4C;
+}
+
+.p_modal {
+  font-family: 'MarkLight';
+  font-size: 20px;
+  color: #003D4C;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  text-align: justify;
+}
+
+.p_modal_comentarios {
+  font-family: 'MarkLight';
+  font-size: 16px;
+  color: #F3EBEB;
+  text-align: justify;
+  margin-left: 10px;
+
+}
+
+.espacio {
+  width: 10px;
+  height: 5px;
+}
+
+.tit_comentario {
+  color: #003D4C;
+  font-family: 'MarkBold';
+  padding-bottom: 10px;
+}
+
+.recuadro {
+  padding-bottom: 10px;
+}
+
+#comentarios {
+  border-radius: 5px;
+  border-color: #487a7b;
+  background-color: #487a7b;
+  width: 640px;
+}
+
+.input_comentario {
+  height: 30px;
+  width: 640px;
+  background-color: #487a7b;
+  border: 1px solid #487a7b;
+  border-radius: 5px;
+  font-family: 'MarkLight';
+  font-size: 16px;
+  size: 30px;
+  margin-bottom: 10px;
+  padding: 5px;
+  outline: none;
+  color: #F3EBEB;
+}
+
+.input_comentario::placeholder {
+  color: #F3EBEB;
+}
+
+
+.contenido_secundario_p3 {
+  text-align: justify;
+  margin-top: 20px;
+  font-family: 'MarkLight';
+  font-size: 18px;
+  text-decoration: none;
+  color: #003D4C;
+}
+
+.contenido_secundario_p3 a {
+  text-decoration: none;
+  color: #003D4C;
+}
+
+.contenido_secundario_p3 a:hover {
+  text-decoration: none;
+  font-weight: bold;
+  color: #003D4C;
+}
+
+.imagen_modal {
+  margin-top: 20px;
+  width: 640px;
+  height: 640px;
+}
+
+#verMas {
+  background-color: transparent;
+  cursor: pointer;
+  color: #487a7b;
+  font-family: 'MarkLight';
+  font-size: 16px;
+  padding-top: 5px;
+  border: none;
+  text-decoration: none;
+}
+
+#verMas:hover {
+  color: #487a7b;
+  font-weight: bold;
+}
+
+/*Animaciones para el modal*/
+[data-animation] .modal-dialog {
+  opacity: 0;
+  transition: all 0.5s var(--bounceEasing);
+}
+
+[data-animation].is-visible .modal-dialog {
+  opacity: 1;
+  transition-delay: 0.2s;
+}
+
+[data-animation="slideInOutLeft"] .modal-dialog {
+  transform: translateX(-100%);
+}
+
+[data-animation="slideInOutLeft"].is-visible .modal-dialog {
+  transform: none;
+}
+
+@media screen and (max-width: 1210px) {
+  #publicaciones {
+    justify-content: center;
+    max-width: 1200px;
+  }
+
+  #buscar {
+    width: 500px;
+  }
+}
+
+@media screen and (max-width: 810px) {
+  .imagen {
+    width: 265px;
+    height: 265px;
+  }
+
+  #buscar {
+    font-size: 16px;
+    width: 360px;
+  }
+
+  #ordenar {
+    font-size: 16px;
+    width: 180px;
+  }
+
+  .nombres_Monumentos {
+    font-size: 20px;
+  }
+}
+
+@media screen and (max-width: 639px) {
+  #publicaciones {
+    max-width: 300px;
+  }
+
+  #ordenar {
+    width: 165px;
+    font-size: 14px;
+  }
+
+  #buscar {
+    width: 120px;
+  }
+
+  #buscar::placeholder {
+    visibility: hidden;
+  }
+}

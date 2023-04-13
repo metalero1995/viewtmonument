@@ -1,0 +1,64 @@
+.ordernar{
+    color: #003D4C;
+}
+
+h1, h2{
+    font-family: 'MarkBold';
+    margin-top: 30px;
+    margin-bottom: 10px;
+}
+
+h1{
+    font-size: 50px;
+    text-align: center;
+}
+
+h2{
+    font-size:37px;
+}
+
+h3, p{
+    font-family: 'MarkLight';
+    text-align:justify;
+    margin-bottom: 10px;
+}
+
+h3{
+    font-size: 24px;
+    font-weight: bold;
+}
+.ordernar{
+    margin-left: 150px;
+    margin-right: 150px;
+}
+.final{
+    margin-bottom: 60px;
+}
+p{
+    font-size: 20px ;
+    color: #003D4C;
+}
+a{
+    color: #003D4C;
+}
+@media screen and (max-width: 1050px){
+    h1{
+        text-align:left;
+    }
+    .ordernar{
+        margin-left: 100px;
+        margin-right: 100px;
+    }
+}
+@media screen and (max-width: 700px){
+    .ordernar{
+        margin-left: 50px;
+        margin-right: 50px;
+    }
+    h1{
+        font-size: 42px;
+    }
+    h2{
+        font-size: 30px;
+    }
+}

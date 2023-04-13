@@ -1,0 +1,381 @@
+/*Declaramos una nueva fuente*/
+@font-face {
+    font-family: 'MarkLight';
+    font-style: normal;
+    font-weight: normal;
+    src: url(FF/Mark-Light.woff2),
+        url(/FF/Mark-Light.ttf) format("ttf"),
+        url(/FF/Mark-Light.woff) format("woff"),
+        url(/FF/Mark-Light.eot) format("eot");
+}
+
+@font-face {
+    font-family: 'MarkBold';
+    font-style: normal;
+    font-weight: normal;
+    src: url(FF/Mark-Bold.woff2),
+        url(/FF/Mark-Bold.ttf) format("ttf"),
+        url(/FF/Mark-Bold.woff) format("woff"),
+        url(/FF/Mark-Bold.woff2) format("eot");
+}
+
+/*
+----------------------------------------------------------
+  ELEMENTOS GLOBALES
+  --------------------------------------------------------
+  */
+/*Quita padding y margin innecesarios para todos los elementos*/
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+/*Elementos necesarios para el body, quitar desplazamiento h, minimo tamaño de pantalla y color de fondo*/
+body {
+    overflow-x: hidden;
+    min-height: 100vh;
+    background: #F3EBEB;
+}
+
+/*Elemento que cambia la scrollbar*/
+::-webkit-scrollbar {
+    width: 10px;
+    background-color: #003D4C;
+}
+
+::-webkit-scrollbar-track {
+
+    background-color: #F3EBEB;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #003D4C;
+}
+
+/*
+    -----------------------------------------------------
+    HEADER
+    -----------------------------------------------------
+    */
+/*Hacemos que el header/navbar sea scrolleable*/
+.seguidor {
+    top: 0;
+    position: sticky;
+    z-index: 2;
+    box-shadow: 0px 3px 3px rgba(0, 0, 0, 0.15);
+}
+
+/*Damos formato de ordenamineto a todos los elementos dentro del nav*/
+.botones_generales {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #F3EBEB;
+    padding: 0;
+}
+
+/*Damos formato de orden a los botones en forma de fila*/
+.botonesFormatoFila {
+    display: flex;
+    height: 100%;
+    color: #003D4C;
+}
+
+/*Decoración de los botones del header*/
+.botonNav {
+    color: #003D4C;
+    cursor: pointer;
+    font-family: 'MarkLight';
+    font-size: 16px;
+    padding: 20px 30px 20px 30px;
+    text-decoration: none;
+}
+
+/*Decoración de los botones del header cuando pasa el cursor por encima*/
+.botonNav:hover {
+    background-color: #f7f2f2;
+    font-weight: bold;
+}
+
+/*Decoración del botón del header que indica en que página estamos*/
+.botonSeleccionado {
+    background-color: RGBA(0, 61, 76, .1);
+    font-weight: bold;
+}
+
+/*Decoración del botón del header que indica en que página estamos cuando pasa el cursor por encima*/
+.botonSeleccionado:hover {
+    background-color: RGBA(0, 61, 76, .1);
+}
+
+/*Decoración del botón del header de inicio de sesión*/
+.botonInicioSesion {
+    background-color: #003D4C;
+    color: #F3EBEB;
+    padding-left: 50px;
+    padding-right: 50px;
+}
+
+/*Decoración del botón del header de inicio de sesión cuando pasa el cursor por encima*/
+.botonInicioSesion:hover {
+    background-color: #003D4C;
+    font-weight: bold;
+}
+
+/*Formato y tamaño del logotipo*/
+.logo {
+    padding: 0px 0px 0px 15px;
+    width: 250px;
+}
+
+/*Preparamos terreno para la creación del separador*/
+.separador {
+    display: flex;
+    align-items: center;
+}
+
+/*Creamos la linea, forma y tamaño del separador*/
+.lineaVertical {
+    border-color: #003D4C;
+    border-left: none;
+    border-bottom: none;
+    border-top: none;
+    height: 50px;
+    color: #003D4C;
+}
+
+/*Permite que no se desplegue el toggle*/
+.toggle {
+    display: none;
+}
+
+/*
+  -----------------------------------------------------
+  FOOTER
+  -----------------------------------------------------
+  */
+/*Damos formato de ordenamineto a todos los elementos dentro del nav*/
+.botones_generales_footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #003D4C;
+    padding: 0;
+}
+
+/*Damos formato de orden a los botones en forma de fila*/
+.botonesFormatoFila_footer {
+    display: flex;
+    height: 100%;
+}
+
+/*Decoración de los botones del header*/
+.botonNav_footer {
+    background-color: #003D4C;
+    color: #F3EBEB;
+    border: none;
+    cursor: pointer;
+    font-family: 'MarkLight';
+    font-size: 16px;
+    padding: 20px 30px 20px 30px;
+    text-decoration: none;
+}
+
+/*Decoración de los botones del header cuando pasa el cursor por encima*/
+.botonNav_footer:hover {
+    background-color: #034a5c;
+    font-weight: bold;
+}
+
+/*Decoración del botón del header que indica en que página estamos cuando pasa el cursor por encima*/
+.botonSeleccionado_footer:hover {
+    background-color: RGBA(0, 61, 76, .1);
+}
+
+
+/*Formato y tamaño del logotipo*/
+.logo_footer {
+    padding: 0px 0px 0px 15px;
+    width: 250px;
+}
+
+/*Preparamos terreno para la creación del separador*/
+.separador_footer {
+    display: flex;
+    align-items: center;
+}
+
+/*Creamos la linea, forma y tamaño del separador*/
+.lineaVertical_footer {
+    border-color: #F3EBEB;
+    border-left: none;
+    border-bottom: none;
+    border-top: none;
+    height: 50px;
+    color: #F3EBEB;
+}
+
+/* The container <div> - needed to position the dropdown content */
+.desplegar {
+    position: relative;
+    display: inline-block;
+}
+
+/* Dropdown Content (Hidden by Default) */
+.desplegar-contenido {
+    display: none;
+    bottom: 60px;
+    position: absolute;
+    background-color: #F3EBEB;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+/* Links inside the dropdown */
+.desplegar-contenido a {
+    color: #003D4C;
+    font-size: 16px;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    font-family: 'MarkLight';
+}
+
+/* Change color of dropdown links on hover */
+.desplegar-contenido a:hover {
+    background-color: #f7f2f2
+}
+
+/* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
+.show {
+    display: block;
+}
+
+@media screen and (max-width: 1050px) {
+
+    /*Prueba*/
+    .botones_generales {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        background-color: #F3EBEB;
+        padding: 0;
+    }
+
+    .botonesFormatoFila {
+        display: none;
+        height: max-content;
+    }
+
+    .separador {
+        display: block;
+    }
+
+    .lineaVertical {
+        /* border-color: #003D4C; */
+
+        /* border-bottom: none; */
+        /* border-top: none; */
+        height: 0px;
+    }
+
+    .toggle {
+        font-size: 20px;
+        width: 60px;
+        height: 60px;
+        display: block;
+        list-style: none;
+        border: none;
+        color: #003D4C;
+        background-color: #F3EBEB;
+    }
+
+    .desplegar_principal {
+        display: none;
+        position: absolute;
+        background-color: #F3EBEB;
+        min-width: 160px;
+        width: 100%;
+        overflow: auto;
+        box-shadow: 0px 5px 5px 0px rgba(0, 0, 0, 0.3);
+        right: 0;
+        z-index: 0;
+        top: 60px;
+    }
+
+    .desplegar_principal a {
+        display: flex;
+        justify-content: center;
+
+    }
+
+    .show_principal {
+        display: block;
+    }
+
+    .desplegar-contenido {
+        bottom: 65px;
+    }
+
+
+    @media screen and (max-width: 910px) {
+        .logo_footer {
+            padding: 20px 15px 20px 15px;
+        }
+
+        .botones_generales_footer {
+            flex-direction: column;
+        }
+
+        .separador_footer {
+            flex-direction: column;
+            width: 100%;
+        }
+
+        .botonesFormatoFila_footer {
+            flex-direction: column;
+            width: 100%;
+            align-items: center;
+        }
+
+        .lineaVertical_footer {
+            border: none;
+            height: 0px;
+        }
+
+        .botonNav_footer {
+            width: 100%;
+            text-align: center;
+        }
+
+        .desplegar-contenido {
+            position: initial;
+            text-align: center;
+            box-shadow: 0px 8px 16px 0px rgb(0 0 0 / 0%);
+        }
+/*
+        .desplegar-contenido a {
+            color: #F3EBEB;
+            text-align: center;
+            width: 100%;
+        }
+
+        .desplegar-contenido a:hover {
+            background-color: #034a5c;
+        }
+*/
+        .desplegar{
+            width: 100%;
+        }
+    }
+    @media screen and (max-width: 450px){
+        .desplegar_principal a{
+            font-size: 16px;
+        }
+        .botonNav_footer {
+            font-size: 16px; 
+        }
+    }
+}

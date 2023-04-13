@@ -1,0 +1,108 @@
+/*Ordenamos todo para que ocupe el espacio total del html*/
+.ordenar {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+/*Todo el contenido de ingreso*/
+.contenido_principal {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  position: relative;
+  padding-bottom: 50px;
+}
+
+/*Tipo de letra para el titulo principal*/
+.titulo_principal {
+  margin: 20px;
+  font-family: 'MarkBold';
+  color: #003D4C;
+  font-size: 50px;
+}
+
+/*Contenido del logueo */
+.contenido_secundario_p1 {
+  display: flex;
+  flex-direction: column;
+}
+
+/*Párrafos iniciales del logueo*/
+.parrafos_primarios {
+  font-family: 'MarkBold';
+  color: #003D4C;
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+/*Formato de diseño del input*/
+.input {
+  height: 40px;
+  width: 680px;
+  background-color: transparent;
+  border: 1px solid #003D4C;
+  font-family: 'MarkLight';
+  font-size: 20px;
+  size: 30px;
+  margin-bottom: 20px;
+  padding: 5px;
+  outline: none;
+}
+
+/*Botón de formato de login*/
+.submit {
+  font-size: 20px;
+  font-family: 'MarkLight';
+  color: white;
+  background-color: #003D4C;
+  border-style: none;
+  width: 680px;
+  height: 50px;
+  cursor: pointer;
+}
+
+/*Botón de formato de hover login*/
+.submit:hover {
+  font-weight: bold;
+}
+
+.tamaño {
+  height: 200px;
+  resize: none;
+  margin-bottom: 30px;
+}
+
+@media screen and (max-width: 1050px) {}
+
+@media screen and (max-width: 700px) {
+
+  .input,
+  .submit {
+    width: 400px;
+  }
+
+}
+
+@media screen and (max-width: 450px) {
+
+  .input,
+  .submit {
+    width: 280px;
+  }
+  .titulo_principal{
+    font-size: 40px;
+  }
+  .parrafos_primarios{
+    font-size: 20px;
+  }
+  .contenido_secundario_p1 {
+
+    align-items: center;
+
+  }
+  .input{
+    font-size: 16px;
+  }
+}
